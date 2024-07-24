@@ -27,7 +27,7 @@ void inputText(string* text) {
 }
 
 void main() {
-	CustomDiv* divOne = new CustomDiv;
+	CustomElement* ElementOne = new CustomElement;
 	string* customText = new string;
 	string* customStyle = new string;
 	string* element = new string;
@@ -44,9 +44,9 @@ void main() {
 
 	inputText(customStyle);
 
-	divOne->setDiv(*element, *customText, *customStyle);
+	ElementOne->setElement(*element, *customText, *customStyle);
 
-	print(divOne->getDiv());
+	print(ElementOne->getElement());
 
 	vector<int> v = { 1, 2, 3 };
 	print("{}\n", v);
@@ -73,7 +73,7 @@ void main() {
 		<< "<title>Document</title>\n"
 		<< "</head>\n"
 		<< "<body>\n"
-		<< divOne->getDiv()
+		<< ElementOne->getElement()
 		<< "</body>\n"
 		<< "</html>\n";
 
@@ -81,7 +81,7 @@ void main() {
 	ShellExecuteA(NULL, "open", "example.html", NULL, NULL, SW_SHOWNORMAL);
 	cout << "HTML file created and text written successfully." << endl;
 
-	delete divOne;
+	delete ElementOne;
 	delete customText;
 	delete customStyle;
 	delete element;

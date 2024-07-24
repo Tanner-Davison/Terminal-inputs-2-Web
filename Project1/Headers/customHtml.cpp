@@ -3,18 +3,17 @@
 
 using namespace std;
 
-CustomDiv::CustomDiv(string custom) : div(new string(custom)) {
+CustomElement::CustomElement(string custom) : element(new string(custom)) {
 	cout << "Custom Div Created" << endl;
 }
 
-
-void CustomDiv::setDiv(string type, string bodyP, string style) {
-	*div = "<" + type + " style=\"" + style + "\">" + bodyP + "</" + type + ">";
+void CustomElement::setElement(string type, string bodyP, string style) {
+	*element = "<" + type + " style=\"" + style + "\">" + bodyP + "</" + type + ">";
 }
-string CustomDiv::getDiv() {
-	return *div;
+string CustomElement::getElement() {
+	return *element;
 }
 
-CustomDiv::~CustomDiv() {
-	delete div;
+CustomElement::~CustomElement() {
+	delete element;
 }

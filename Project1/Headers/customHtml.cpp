@@ -8,18 +8,12 @@ CustomDiv::CustomDiv(string custom) : div(new string(custom)) {
 }
 
 
-void CustomDiv::setDiv(string stringP) {
-	*div = "<div>" + stringP + "</div>";
+void CustomDiv::setDiv(string type, string bodyP, string style) {
+	*div = "<" + type + " style=\"" + style + "\">" + bodyP + "</" + type + ">";
 }
 string CustomDiv::getDiv() {
 	return *div;
-
 }
-
-
-
-
-
 
 CustomDiv::~CustomDiv() {
 	delete div;

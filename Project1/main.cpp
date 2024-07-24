@@ -12,7 +12,6 @@ using namespace fmt;
 
 #define END cout << "\n --end of program" << "\n";
 
-
 void main() {
 	CustomDiv* divOne = new CustomDiv;
 	string* customText = new string;

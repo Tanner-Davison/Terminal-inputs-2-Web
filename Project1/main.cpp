@@ -27,7 +27,7 @@ void inputText(string* text) {
 	}
 }
 
-void createElement(string* element, string* customText, string* customStyle) {
+void createElement(string* element, string* customText, string* customStyle, CustomElement* elementObj) {
 	cout << "Which element would you like to create?" << endl;
 	cin >> *element;
 	cout << "Create Inner Element/ Inner Text!" << endl;
@@ -35,13 +35,16 @@ void createElement(string* element, string* customText, string* customStyle) {
 	cout << "Set your inline styles for the parent/main element." << endl;
 	inputText(customStyle);
 	cout << "element Created!" << endl;
+	elementObj->setElement(*element, *customText, *customStyle);
 }
 
 void main() {
-	CustomElement* ElementOne = new CustomElement;
+	CustomElement* ElementOne = new CustomElement{ "element One" };
 	string* customText = new string;
 	string* customStyle = new string;
 	string* element = new string;
+
+	cout << "PRAC: " << &customText << endl;
 	boolean createEl = true;
 
 	while (createEl) {
@@ -50,7 +53,7 @@ void main() {
 		cin >> stillCreating;
 
 		if (stillCreating == "YES" || stillCreating == "yes") {
-			createElement(element, customText, customStyle);
+			createElement(element, customText, customStyle, ElementOne);
 		}
 		else if (stillCreating == "NO" || stillCreating == "no") {
 			cout << "Creation of Elements Done." << endl;
@@ -61,7 +64,7 @@ void main() {
 		}
 	}
 
-	ElementOne->setElement(*element, *customText, *customStyle);
+
 
 	print(ElementOne->getElement());
 

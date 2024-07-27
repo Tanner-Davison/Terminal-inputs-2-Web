@@ -35,6 +35,7 @@ void createElement(string* element, string* customText, string* customStyle, Cus
 	cout << "Set your inline styles for the parent/main element." << endl;
 	inputText(customStyle);
 	cout << "element Created!" << endl;
+
 	elementObj->setElement(*element, *customText, *customStyle);
 }
 

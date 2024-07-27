@@ -74,8 +74,8 @@ void main() {
 
 	auto now = chrono::system_clock::now();
 
-	print("Data and time: {}\n", now);
-	print("Time: {:%H:%M}\n", now);
+	/*print("Data and time: {}\n", now);
+	print("Time: {:%H:%M}\n", now);*/
 
 
 	auto out = output_file("guide.txt");

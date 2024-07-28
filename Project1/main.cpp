@@ -77,7 +77,6 @@ void main() {
 	/*print("Data and time: {}\n", now);
 	print("Time: {:%H:%M}\n", now);*/
 
-
 	auto out = output_file("guide.txt");
 	out.print("Dont {}", "Panic");
 
@@ -86,7 +85,6 @@ void main() {
 		cerr << "Error: could not create the file" << "\n";
 		EXIT_SUCCESS;
 	}
-
 	outFile << "<!DOCTYPE html>\n"
 		<< "<html lang=\"en\">\n"
 		<< "<head>\n"

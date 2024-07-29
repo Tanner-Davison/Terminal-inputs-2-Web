@@ -38,7 +38,6 @@ void createElement(string* element, string* customText, string* customStyle, Cus
 
 	elementObj->setElement(*element, *customText, *customStyle);
 }
-
 void main() {
 	CustomElement* ElementOne = new CustomElement{ "element One" };
 	string* customText = new string;

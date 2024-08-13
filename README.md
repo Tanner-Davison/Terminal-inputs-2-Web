@@ -58,7 +58,7 @@ Element Created!
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/custom-html-element-creator.git
+    git clone https://github.com/Tanner-Davison/Terminal-inputs-2-Web.git
     ```
 
 2. Compile the code using a C++ compiler with support for the fmt library.
